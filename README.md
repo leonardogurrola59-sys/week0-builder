@@ -1,4 +1,15 @@
-<<<<<<< HEAD
+week0-builder
+Live URL: https://week0-builder.vercel.app
+Docs URL: https://week0-builder.vercel.app/docs
+
+How to run locally:
+
+npm install
+npm run dev
+npm run build
+npm start
+Notes: Week 0 setup: Next.js, Tailwind, Supabase (project skeleton). Deployed to Vercel. Commit for Week 0: <replace-with-commit-link-after-step 4>
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -35,6 +46,6 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-=======
+
 # week0-builder
->>>>>>> 5b88647d40000ce9215a34bd92de1f8425e46c4f
+5b88647d40000ce9215a34bd92de1f8425e46c4f
