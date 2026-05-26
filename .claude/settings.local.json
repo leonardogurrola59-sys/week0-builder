@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(echo \"PID: $!\")",
+      "Bash(curl -sf http://localhost:3000)",
+      "Bash(mkdir -p /Users/leonardogurrolavelasco/week0-builder/.claude)",
+      "mcp__Claude_Preview__preview_start"
+    ]
+  }
+}
