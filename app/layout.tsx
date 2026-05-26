@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -17,10 +18,11 @@ export const metadata: Metadata = {
   description: "A minimal setup guide for Week 0 builders.",
 };
 
-{children}
-So the full file becomes (only showing modified part):
-
-export default function RootLayout({...}) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html
       lang="en"
