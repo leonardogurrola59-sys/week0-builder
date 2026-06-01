@@ -27,6 +27,14 @@ export default function Navbar() {
               Core Dashboard
             </Link>
           </li>
+          <li>
+            <Link
+              href="/research"
+              className="text-zinc-400 hover:text-white transition-colors"
+            >
+              Research
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>

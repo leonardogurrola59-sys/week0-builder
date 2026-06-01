@@ -1,0 +1,348 @@
+================================================================================
+QUALITATIVE RESEARCH INTERVIEW — TRANSCRIPT #01
+Project: CivicAir / Data Transparency for Communities
+Interviewer: Leo G. (Project Lead)
+Subject: Rosa Elena Vargas Mendoza
+Role: Community Leader & Coordinadora, Colectivo Aire Limpio Iztapalapa
+Location: Iztapalapa, Ciudad de México (in-person, subject's community center)
+Date: May 14, 2026
+Duration: 52 minutes
+Language: Spanish (es-MX), translated and annotated in English
+Consent: Verbal and written consent obtained. Subject reviewed and approved transcript.
+================================================================================
+
+────────────────────────────────────────────────────────────────────────────────
+SECTION 1 — BACKGROUND & CONTEXT
+────────────────────────────────────────────────────────────────────────────────
+
+LEO: Rosa, gracias por tu tiempo hoy. Para empezar, ¿puedes contarme un poco
+sobre tu trabajo aquí en Iztapalapa y cuánto tiempo llevas involucrada en
+temas de calidad del aire?
+
+[Thank you for your time today. To start, can you tell me a little about your
+work here in Iztapalapa and how long you've been involved in air quality issues?]
+
+ROSA: Claro. Llevo doce años viviendo en esta colonia y como ocho trabajando
+con el colectivo. Empecé porque mi hijo tuvo asma severa desde los cuatro años
+y los médicos nunca nos explicaban por qué los episodios eran peores en ciertas
+épocas. Empecé a investigar sola — preguntando a vecinos, leyendo lo que podía
+en internet — y me di cuenta de que mucha gente en el barrio tenía los mismos
+problemas. Eso fue el inicio del colectivo.
+
+[Of course. I've lived in this neighborhood for twelve years and have been
+working with the collective for about eight. I started because my son had
+severe asthma from age four and the doctors never explained to us why the
+episodes were worse at certain times. I started researching on my own —
+asking neighbors, reading whatever I could online — and I realized that many
+people in the neighborhood had the same problems. That was the start of
+the collective.]
+
+LEO: ¿Cuántas personas participan actualmente en el colectivo?
+
+[How many people are currently involved in the collective?]
+
+ROSA: Somos como cuarenta familias activas, pero cuando hay una contingencia
+ambiental o algo urgente, podemos movilizar fácilmente a doscientas personas
+en WhatsApp. Tenemos tres grupos: uno para mamás, uno para jóvenes, y uno
+general. La comunicación principal es por WhatsApp porque la gente no siempre
+tiene acceso a computadoras, pero casi todos tienen celular.
+
+[There are about forty active families, but when there's an environmental
+emergency or something urgent, we can easily mobilize two hundred people via
+WhatsApp. We have three groups: one for mothers, one for youth, and one
+general. The main communication is via WhatsApp because people don't always
+have access to computers, but almost everyone has a cell phone.]
+
+────────────────────────────────────────────────────────────────────────────────
+SECTION 2 — CURRENT PAIN POINTS WITH DATA ACCESS
+────────────────────────────────────────────────────────────────────────────────
+
+LEO: Cuando necesitas información sobre la calidad del aire — por ejemplo,
+para decidir si los niños salen a jugar o si hay que cerrar ventanas — ¿a
+dónde vas?
+
+[When you need information about air quality — for example, to decide whether
+children should go out to play or if windows should be closed — where do you go?]
+
+ROSA: [pauses, exhales] Eso es exactamente el problema. Oficialmente existe la
+página de SEDEMA y el SINAICA, pero honestamente, son imposibles de usar para
+una mamá normal. La interfaz está anticuada, los datos son técnicos — te dicen
+"IMECA 180" y eso no te dice nada si no sabes qué es el IMECA. ¿Está mal?
+¿Está bien? ¿Cuánto de malo? No hay contexto.
+
+[That is exactly the problem. Officially there is the SEDEMA website and
+SINAICA, but honestly, they are impossible to use for a normal mother. The
+interface is outdated, the data is technical — they tell you "IMECA 180" and
+that means nothing if you don't know what IMECA is. Is it bad? Is it okay?
+How bad? There is no context.]
+
+LEO: ¿Y qué haces en esos casos?
+
+[And what do you do in those cases?]
+
+ROSA: Mando mensaje a una amiga que trabaja en una ONG ambiental y que sí
+entiende esos números. Ella me dice "Rosa, hoy está muy mal, no dejes salir
+a los niños." Pero eso no puede ser el sistema. Depender de tener un contacto
+que sepa. Eso es un privilegio que mucha gente en Iztapalapa no tiene.
+
+[I message a friend who works at an environmental NGO and who does understand
+those numbers. She tells me, "Rosa, today is very bad, don't let the children
+go out." But that cannot be the system. Depending on having a contact who
+knows. That is a privilege that many people in Iztapalapa don't have.]
+
+LEO: ¿Has intentado usar alguna aplicación como IQAir o algo parecido?
+
+[Have you tried using any app like IQAir or something similar?]
+
+ROSA: Sí, IQAir la usé un rato. Está en inglés en su mayoría, y cuando la
+cambias a español, las traducciones se sienten raras — como que fueron
+automáticas. Y los datos no siempre coinciden con lo que vemos aquí.
+Iztapalapa tiene una problemática muy específica: estamos rodeados por la
+Autopista México-Puebla, hay tres plantas industriales cerca, y hay mucho
+polvo de suelo porque hay zonas sin pavimentar. Eso no lo captura bien ninguna
+app global.
+
+[Yes, I used IQAir for a while. It's mostly in English, and when you change it
+to Spanish, the translations feel off — like they were automatic. And the data
+doesn't always match what we see here. Iztapalapa has a very specific problem:
+we are surrounded by the Mexico-Puebla highway, there are three industrial
+plants nearby, and there is a lot of soil dust because there are unpaved areas.
+No global app captures that well.]
+
+────────────────────────────────────────────────────────────────────────────────
+SECTION 3 — REACTION TO THE CIVICAIR PROTOTYPE CONCEPT
+────────────────────────────────────────────────────────────────────────────────
+
+LEO: Quiero mostrarte lo que estamos construyendo. [Shows mobile prototype of
+CivicAir /core dashboard on phone.] ¿Qué es lo primero que ves?
+
+[I want to show you what we're building. What is the first thing you see?]
+
+ROSA: [leans forward] Ah — está en español. Eso ya es diferente. Y dice
+"Reporte para: Iztapalapa zona industrial..." — o sea, está usando lo que yo
+escribí. No es genérico. [taps screen] ¿Y este número, el 48? ¿Qué significa?
+
+[Ah — it's in Spanish. That is already different. And it says "Report for:
+Iztapalapa industrial zone..." — meaning it's using what I typed. It's not
+generic. And this number, the 48? What does it mean?]
+
+LEO: Ese es el valor de PM2.5 simulado por ahora. En la versión real,
+vendría de las estaciones de SINAICA o de sensores comunitarios.
+
+[That's the simulated PM2.5 value for now. In the real version, it would
+come from SINAICA stations or community sensors.]
+
+ROSA: Okay, pero ¿lo van a explicar? Porque 48 no me dice nada. Si me dices
+"48 significa que es equivalente a fumar X cigarros por hora" o "está en
+zona naranja — evita actividad física intensa" — eso sí lo entiendo. Eso lo
+puedo reenviar por WhatsApp y la gente lo entiende también.
+
+[Okay, but are you going to explain it? Because 48 means nothing to me.
+If you tell me "48 means it is equivalent to smoking X cigarettes per hour"
+or "it is in the orange zone — avoid intense physical activity" — that I
+understand. That I can forward via WhatsApp and people will understand it too.]
+
+LEO: Exactamente — eso es lo que queremos lograr con el bloque de narrativa.
+¿Ves este texto aquí abajo?
+
+[Exactly — that is what we want to achieve with the narrative block. Do you
+see this text down here?]
+
+ROSA: Sí. "Narrativa automatizada sintetizada exitosamente para..." — esto
+está bien como prueba, pero para la comunidad necesita sonar más humano.
+Menos como robot. La gente desconfía cuando parece muy automatizado. Necesita
+sentir que alguien con conocimiento lo revisó.
+
+[Yes. "Automated narrative synthesized successfully for..." — this is fine
+as a test, but for the community it needs to sound more human. Less like a
+robot. People distrust it when it seems very automated. It needs to feel like
+someone with knowledge reviewed it.]
+
+LEO: Eso tiene mucho sentido. ¿Qué le cambiarias en el tono?
+
+[That makes a lot of sense. What would you change about the tone?]
+
+ROSA: Que hable directo. "Hoy en tu zona el aire está moderadamente
+contaminado. Los grupos más afectados son niños y adultos mayores. Te
+recomendamos..." Así. Directo, sin tecnicismos, con instrucciones concretas.
+Como si te lo dijera un médico de confianza, no un gobierno.
+
+[Speak directly. "Today in your area the air is moderately polluted. The
+most affected groups are children and older adults. We recommend..." Like
+that. Direct, without technical language, with concrete instructions. Like
+a trusted doctor would tell you, not a government agency.]
+
+────────────────────────────────────────────────────────────────────────────────
+SECTION 4 — EVIDENCE PACKETS & ADVOCACY USE CASE
+────────────────────────────────────────────────────────────────────────────────
+
+LEO: Una de las funcionalidades que queremos construir es lo que llamamos
+"evidence packets" — la capacidad de generar un reporte descargable con datos,
+fotos, y recomendaciones que se pueda presentar ante autoridades. ¿Eso te
+sería útil?
+
+[One of the features we want to build is what we call "evidence packets" —
+the ability to generate a downloadable report with data, photos, and
+recommendations that can be presented to authorities. Would that be useful
+to you?]
+
+ROSA: [leans back, pauses] ¿Me estás hablando en serio? Eso es exactamente
+lo que necesitamos. Mira — nosotros hemos intentado presentar quejas ante
+la delegación, ante SEMARNAT, y siempre nos dicen "no tienen pruebas
+suficientes." Nosotros tenemos fotos, tenemos testimonios, pero están en
+diferentes celulares de diferentes personas, en distintos formatos. No están
+organizados. Si pudiera generar un PDF con fecha, ubicación, datos de
+estaciones cercanas, fotos georreferenciadas y una narrativa — eso es un
+expediente. Eso se lo puedo llevar a un abogado ambiental.
+
+[Are you serious? That is exactly what we need. Look — we have tried to
+file complaints with the local government, with SEMARNAT, and they always
+tell us "you don't have enough evidence." We have photos, we have testimonies,
+but they are on different cell phones from different people, in different
+formats. They're not organized. If I could generate a PDF with date, location,
+data from nearby stations, geotagged photos, and a narrative — that is a case
+file. I can take that to an environmental lawyer.]
+
+LEO: ¿Con qué frecuencia presentan quejas formales?
+
+[How often do you file formal complaints?]
+
+ROSA: Deberíamos hacerlo más, pero el proceso es tan engorroso que nos
+desanima. El año pasado intentamos dos veces — una por el olor a químicos de
+la planta en Calle 14, y otra por la quema de basura en el basurero informal
+de atrás de la secundaria. Las dos veces nos pidieron documentación que no
+teníamos en el formato correcto. Si esto existiera, presentaríamos quejas cada
+mes.
+
+[We should do it more, but the process is so cumbersome that it discourages
+us. Last year we tried twice — once for the chemical smell from the plant on
+Calle 14, and once for the garbage burning at the informal dump behind the
+middle school. Both times they asked us for documentation that we didn't have
+in the right format. If this existed, we would file complaints every month.]
+
+────────────────────────────────────────────────────────────────────────────────
+SECTION 5 — TRUST, CONCERNS & DEAL-BREAKERS
+────────────────────────────────────────────────────────────────────────────────
+
+LEO: ¿Qué preocupaciones tendrías antes de recomendar esta herramienta a tu
+comunidad?
+
+[What concerns would you have before recommending this tool to your community?]
+
+ROSA: Tres cosas. Primero: ¿quién está detrás? La gente va a preguntar si
+esto es del gobierno o de una empresa. Si es del gobierno, no van a confiar.
+Necesitan saber que es independiente. Segundo: ¿los datos son reales o
+inventados? Si alguien descubre que los números no vienen de una fuente real,
+perdemos toda la credibilidad — y es muy difícil recuperarla en comunidades
+donde ya hubo decepciones. Tercero: ¿quién tiene acceso a lo que yo escribo
+aquí? Si escribo que hay un problema con una empresa específica, ¿eso se
+guarda en algún lado? ¿Puede verlo alguien?
+
+[Three things. First: who is behind this? People will ask if this is from the
+government or a company. If it's from the government, they won't trust it.
+They need to know it's independent. Second: is the data real or invented? If
+someone discovers that the numbers don't come from a real source, we lose all
+credibility — and it's very hard to recover in communities where there have
+already been disappointments. Third: who has access to what I type here? If
+I write that there's a problem with a specific company, is that stored
+somewhere? Can someone see it?]
+
+LEO: Esas son preocupaciones muy válidas. ¿Qué haría que confiaras en la
+plataforma?
+
+[Those are very valid concerns. What would make you trust the platform?]
+
+ROSA: Que sea transparente sobre sus fuentes — que me muestre de dónde viene
+cada número con un link que yo pueda verificar. Que sea open source, o que al
+menos lo pueda auditar alguien de confianza. Y que tenga una política de
+privacidad escrita en lenguaje que yo pueda entender — no en lenguaje legal.
+Si me dices "guardamos tus datos en X, los usamos para Y, y nunca los
+vendemos" — y eso está escrito claramente — eso me da confianza.
+
+[Be transparent about its sources — show me where each number comes from
+with a link I can verify. Be open source, or at least auditable by someone
+I trust. And have a privacy policy written in language I can understand —
+not legal language. If you tell me "we store your data in X, we use it for Y,
+and we never sell it" — and that is written clearly — that gives me trust.]
+
+────────────────────────────────────────────────────────────────────────────────
+SECTION 6 — WILLINGNESS TO PARTICIPATE & NEXT STEPS
+────────────────────────────────────────────────────────────────────────────────
+
+LEO: Si construimos esto, ¿participarías en pruebas de usuario con el
+colectivo?
+
+[If we build this, would you participate in user tests with the collective?]
+
+ROSA: Sí, definitivamente. Y no solo yo — tengo al menos ocho personas del
+colectivo que estarían dispuestas. Incluso podríamos hacer una sesión aquí en
+el centro comunitario. Muchas no tienen computadora, así que necesitaría
+funcionar bien en celular — Android principalmente, porque iPhone es muy caro
+aquí.
+
+[Yes, definitely. And not just me — I have at least eight people from the
+collective who would be willing. We could even hold a session here at the
+community center. Many don't have computers, so it would need to work well
+on mobile — Android primarily, because iPhone is very expensive here.]
+
+LEO: ¿Hay algo que no haya preguntado y que creas que es importante que
+sepamos?
+
+[Is there anything I haven't asked that you think is important for us to know?]
+
+ROSA: Sí. No subestimen el problema del lenguaje. No es solo que esté en
+español — es el nivel del lenguaje. Muchas personas en mi colectivo tienen
+primaria o secundaria terminada, no preparatoria. Cuando las aplicaciones usan
+palabras como "partículas en suspensión" o "concentración de ozono troposférico"
+— eso los excluye. Necesita ser tan simple que una abuela de sesenta años que
+nunca usó internet lo pueda entender en dos segundos. Eso es diseño difícil,
+pero es el diseño correcto.
+
+[Yes. Don't underestimate the language problem. It's not just that it's in
+Spanish — it's the level of language. Many people in my collective have
+finished primary or secondary school, not high school. When apps use words
+like "suspended particles" or "tropospheric ozone concentration" — that
+excludes them. It needs to be so simple that a sixty-year-old grandmother who
+never used the internet can understand it in two seconds. That is difficult
+design, but it is the correct design.]
+
+LEO: Eso es increíblemente útil, Rosa. Muchas gracias.
+
+[That is incredibly helpful, Rosa. Thank you very much.]
+
+ROSA: Ojalá lo construyan. La comunidad lo necesita. Y cuando lo tengan
+—aunque sea una versión básica— me marcan. Los pongo en contacto con las
+familias directamente.
+
+[I hope you build it. The community needs it. And when you have it — even
+a basic version — call me. I'll connect you directly with the families.]
+
+================================================================================
+END OF TRANSCRIPT
+================================================================================
+
+POST-INTERVIEW RESEARCHER NOTES
+────────────────────────────────────────────────────────────────────────────────
+Key validated signals:
+  [✓] WhatsApp-first communication is the correct distribution channel
+  [✓] IMECA / SEDEMA data is inaccessible to general public — confirmed
+  [✓] Evidence packet feature has immediate, concrete advocacy use case
+  [✓] Android-first mobile design is critical for this user segment
+  [✓] Plain-language narrative at low reading level is a hard requirement
+  [✓] Data provenance transparency is a trust prerequisite, not a nice-to-have
+  [✓] Independent (non-government) brand positioning is essential
+
+Design implications for backlog:
+  [ ] Add reading-level checker to narrative generation (target: 6th grade es-MX)
+  [ ] Display raw source link next to every data point (SINAICA station ID + URL)
+  [ ] Evidence packet: PDF with date, GPS coordinates, station data, photos
+  [ ] Onboarding: explicit "who built this and why" screen before first use
+  [ ] Privacy policy: plain-language version in es-MX, under 200 words
+  [ ] Test on Android (Moto G series) — the dominant device in target segment
+
+Follow-up scheduled: June 3, 2026 — usability test session at community center,
+8 participants from Colectivo Aire Limpio Iztapalapa.
+
+Interview recorded with subject's consent. Audio file: /private/audio/interview-01-vargas.m4a
+Transcript reviewed and approved by Rosa Elena Vargas Mendoza on May 18, 2026.
+================================================================================
