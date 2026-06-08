@@ -141,6 +141,19 @@ export default function PricingPage() {
   const [churn, setChurn] = useState(7);
   const [activeScenario, setActiveScenario] = useState<ScenarioKey | null>("Expected");
 
+  // Saved scenarios — local React state, in-memory documented output
+  const [savedScenarios, setSavedScenarios] = useState<{
+    index: number;
+    timestamp: string;
+    segment: string;
+    users: number;
+    price: number;
+    conversion: number;
+    churn: number;
+    monthly: number;
+    annual: number;
+  }[]>([]);
+
   function applyScenario(key: ScenarioKey) {
     const s = scenarios[key];
     setUsers(s.users);
@@ -173,6 +186,26 @@ export default function PricingPage() {
   );
 
   const maxAnnual = Math.max(...scenarioResults.map((r) => r.annual), current.annual);
+
+  function handleSaveScenario() {
+    setSavedScenarios((prev) => [
+      ...prev,
+      {
+        index: prev.length + 1,
+        timestamp: new Date().toLocaleString("en-US", {
+          dateStyle: "medium",
+          timeStyle: "short",
+        }),
+        segment,
+        users,
+        price,
+        conversion,
+        churn,
+        monthly: current.monthly,
+        annual: current.annual,
+      },
+    ]);
+  }
 
   return (
     <div className="min-h-screen text-slate-200" style={{ backgroundColor: "#0f172a" }}>
@@ -292,6 +325,15 @@ export default function PricingPage() {
               </div>
             </div>
 
+            {/* Save Scenario — captures current sliders + computed revenue into local state */}
+            <button
+              type="button"
+              onClick={handleSaveScenario}
+              className="w-full rounded-xl border border-violet-600 bg-violet-600/20 px-4 py-3 text-sm font-semibold text-violet-200 transition-colors hover:bg-violet-600/30 hover:text-white"
+            >
+              💾 Save Scenario — capture current inputs &amp; revenue snapshot
+            </button>
+
             {/* Scenario comparison bars */}
             <div>
               <span className="text-xs text-slate-400 uppercase tracking-wide block mb-2">
@@ -337,6 +379,85 @@ export default function PricingPage() {
             </div>
           </SectionCard>
         </div>
+
+        {/* ── Saved Scenarios / Documented Output ── */}
+        <SectionCard title="Saved Scenarios / Documented Output">
+          {savedScenarios.length === 0 ? (
+            <div className="rounded-xl border border-dashed border-slate-700 bg-slate-900/40 p-6 text-center text-sm text-slate-400">
+              No scenarios saved yet. Adjust the sliders above and click{" "}
+              <span className="font-semibold text-violet-300">“💾 Save Scenario”</span> to capture
+              a snapshot here for side-by-side comparison.
+            </div>
+          ) : (
+            <div className="space-y-4">
+              <span className="text-xs text-slate-400 uppercase tracking-wide block">
+                {savedScenarios.length} saved {savedScenarios.length === 1 ? "scenario" : "scenarios"}
+              </span>
+              <div className="overflow-x-auto rounded-xl border border-slate-700">
+                <table className="w-full text-sm text-left">
+                  <thead className="bg-slate-900 text-slate-400 uppercase tracking-wide text-xs">
+                    <tr>
+                      <th className="px-4 py-3">Scenario</th>
+                      <th className="px-4 py-3">Saved At</th>
+                      <th className="px-4 py-3">Segment</th>
+                      <th className="px-4 py-3 text-right">Users</th>
+                      <th className="px-4 py-3 text-right">Price</th>
+                      <th className="px-4 py-3 text-right">Conversion</th>
+                      <th className="px-4 py-3 text-right">Churn</th>
+                      <th className="px-4 py-3 text-right">Monthly Rev.</th>
+                      <th className="px-4 py-3 text-right">Annual Rev.</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {savedScenarios.map((s) => (
+                      <tr key={s.index} className="border-t border-slate-800">
+                        <td className="px-4 py-3 font-semibold text-violet-300">
+                          Scenario #{s.index}
+                        </td>
+                        <td className="px-4 py-3 text-slate-400 font-mono text-xs">{s.timestamp}</td>
+                        <td className="px-4 py-3 text-slate-300">
+                          {segments.find((seg) => seg.key === s.segment)?.label ?? s.segment}
+                        </td>
+                        <td className="px-4 py-3 text-right text-slate-300 font-mono">{fmtNum(s.users)}</td>
+                        <td className="px-4 py-3 text-right text-slate-300 font-mono">${s.price}</td>
+                        <td className="px-4 py-3 text-right text-slate-300 font-mono">{s.conversion}%</td>
+                        <td className="px-4 py-3 text-right text-slate-300 font-mono">{s.churn}%</td>
+                        <td className="px-4 py-3 text-right text-emerald-300 font-mono">{fmtUSD(s.monthly)}</td>
+                        <td className="px-4 py-3 text-right text-indigo-300 font-mono">{fmtUSD(s.annual)}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+
+              {/* Card view for quick visual comparison on smaller screens */}
+              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                {savedScenarios.map((s) => (
+                  <div key={s.index} className="rounded-xl border border-slate-700 bg-slate-900 p-4 space-y-2">
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm font-bold text-violet-300">Scenario #{s.index}</span>
+                      <span className="text-[11px] text-slate-500 font-mono">{s.timestamp}</span>
+                    </div>
+                    <div className="text-xs text-slate-400">
+                      {segments.find((seg) => seg.key === s.segment)?.label ?? s.segment} ·{" "}
+                      {fmtNum(s.users)} users · ${s.price}/mo · {s.conversion}% conv · {s.churn}% churn
+                    </div>
+                    <div className="flex items-center justify-between pt-1 border-t border-slate-800">
+                      <div>
+                        <span className="text-[11px] text-emerald-400 block">Monthly</span>
+                        <span className="text-sm font-bold text-emerald-300">{fmtUSD(s.monthly)}</span>
+                      </div>
+                      <div className="text-right">
+                        <span className="text-[11px] text-indigo-400 block">Annual</span>
+                        <span className="text-sm font-bold text-indigo-300">{fmtUSD(s.annual)}</span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </SectionCard>
 
         {/* ── Assumptions & Recommendation ── */}
         <SectionCard title="Mathematical Assumptions, Risks &amp; Recommendation">
