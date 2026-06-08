@@ -35,6 +35,22 @@ export default function Navbar() {
               Research
             </Link>
           </li>
+          <li>
+            <Link
+              href="/product"
+              className="text-zinc-400 hover:text-white transition-colors"
+            >
+              Product
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/pricing"
+              className="text-zinc-400 hover:text-white transition-colors"
+            >
+              Pricing
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>
