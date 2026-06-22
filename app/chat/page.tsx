@@ -105,16 +105,20 @@ function MessageBubble({
             <div className="flex items-center gap-1">
               <button
                 onClick={() => onFeedback(message.id, "up")}
-                className={`text-xs transition ${
-                  message.feedback === "up" ? "text-emerald-400" : "text-slate-600 hover:text-slate-400"
+                className={`rounded-md px-1.5 py-0.5 text-xs transition ${
+                  message.feedback === "up"
+                    ? "bg-emerald-500/20 text-emerald-400"
+                    : "text-slate-600 hover:text-slate-400"
                 }`}
               >
                 👍
               </button>
               <button
                 onClick={() => onFeedback(message.id, "down")}
-                className={`text-xs transition ${
-                  message.feedback === "down" ? "text-red-400" : "text-slate-600 hover:text-slate-400"
+                className={`rounded-md px-1.5 py-0.5 text-xs transition ${
+                  message.feedback === "down"
+                    ? "bg-amber-500/20 text-amber-400"
+                    : "text-slate-600 hover:text-slate-400"
                 }`}
               >
                 👎
@@ -378,6 +382,8 @@ export default function ChatPage() {
   const [expandedLogId, setExpandedLogId] = useState<string | null>(null);
 
   const scrollAnchorRef = useRef<HTMLDivElement>(null);
+  // Stable id for this browser session's auto-persisted log entry (upserted, not duplicated)
+  const sessionLogIdRef = useRef<string>(crypto.randomUUID());
 
   // Seed the welcome message on mount (client-only to avoid timestamp hydration mismatch)
   useEffect(() => {
@@ -407,10 +413,45 @@ export default function ChatPage() {
     scrollAnchorRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, isTyping]);
 
-  function handleFeedback(id: string, value: "up" | "down") {
-    setMessages((prev) =>
-      prev.map((m) => (m.id === id ? { ...m, feedback: m.feedback === value ? null : value } : m))
+  // Upsert this browser session's log entry (by stable id) instead of duplicating
+  // a new entry on every feedback click.
+  function persistActiveSessionLog(updatedMessages: Message[]) {
+    const feedbackSummary = updatedMessages.reduce(
+      (acc, m) => {
+        if (m.feedback === "up") acc.up += 1;
+        if (m.feedback === "down") acc.down += 1;
+        return acc;
+      },
+      { up: 0, down: 0 }
     );
+
+    const activeLog: ChatLog = {
+      id: sessionLogIdRef.current,
+      saved_at: new Date().toISOString(),
+      stepReached: currentStep,
+      intake: intakeData,
+      messages: updatedMessages,
+      feedbackSummary,
+    };
+
+    setChatLogs((prev) => {
+      const existingIndex = prev.findIndex((l) => l.id === activeLog.id);
+      const updated =
+        existingIndex >= 0
+          ? prev.map((l, i) => (i === existingIndex ? activeLog : l))
+          : [activeLog, ...prev];
+      const capped = updated.slice(0, 20);
+      localStorage.setItem(CHAT_LOGS_KEY, JSON.stringify(capped));
+      return capped;
+    });
+  }
+
+  function handleFeedback(id: string, value: "up" | "down") {
+    const updatedMessages = messages.map((m) =>
+      m.id === id ? { ...m, feedback: m.feedback === value ? null : value } : m
+    );
+    setMessages(updatedMessages);
+    persistActiveSessionLog(updatedMessages);
   }
 
   function appendAssistantMessage(
