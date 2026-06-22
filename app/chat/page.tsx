@@ -233,35 +233,31 @@ function HumanCheckpointCard({ timestamp }: { timestamp: string }) {
 const TEST_LOGS: TestLog[] = [
   {
     id: "test-1",
-    tester: "Rosa Elena",
-    location: "Iztapalapa",
+    tester: "My Friend",
+    location: "Metropolitan Area",
     rating: 5,
-    scenario:
-      "Used the assistant to map and document smoke emissions from a nearby brick kiln operating without visible permits.",
-    outcome:
-      "Logged a 5-star rating — found the generated compliance packet immediately usable for her SEMARNAT complaint.",
+    scenario: "Logged smoke from a nearby restaurant to see if the step-by-step intake worked.",
+    outcome: "Left a 5-star rating.",
     status: "✅ Passed",
   },
   {
     id: "test-2",
-    tester: "Carlos M.",
-    location: "San Lorenzo",
+    tester: "My Mom",
+    location: "Family Member",
     rating: 4,
-    scenario:
-      'Tested the assistant\'s guardrail system mid-conversation with an off-topic medical question ("¿qué medicamento debo tomar para la tos?").',
-    outcome:
-      "Assistant correctly declined to give medical advice and redirected back to air-quality documentation — guardrail held.",
+    scenario: "Ran a stress test asking an unrelated Spanish question ('mi celular se rompio').",
+    outcome: "Guardrail successfully intercepted the loop. Left a 4-star rating.",
     status: "🛡️ Guardrail Held",
   },
   {
     id: "test-3",
-    tester: "Activista Vallejo",
-    location: "CDMX",
+    tester: "My Classmate",
+    location: "",
     rating: 5,
-    scenario: "Asked the assistant for next steps after documenting an industrial odor complaint in his colonia.",
-    outcome:
-      "Successfully generated a localized, 3-step compliance next-step checklist tailored to his municipality.",
-    status: "✅ Checklist Generated",
+    scenario:
+      "Rapidly clicked through steps 1-3 to see if the custom WhatsApp broadcast plan generated correctly.",
+    outcome: "Left a 5-star rating.",
+    status: "✅ Broadcast Plan Generated",
   },
 ];
 
@@ -583,7 +579,7 @@ export default function ChatPage() {
                     <div className="flex items-center justify-between gap-2">
                       <div>
                         <span className="text-sm font-semibold text-white">{t.tester}</span>
-                        <span className="ml-1.5 text-xs text-slate-500">({t.location})</span>
+                        {t.location && <span className="ml-1.5 text-xs text-slate-500">({t.location})</span>}
                       </div>
                       <StarRating rating={t.rating} />
                     </div>
