@@ -59,6 +59,14 @@ export default function Navbar() {
               Marketing
             </Link>
           </li>
+          <li>
+            <Link
+              href="/chat"
+              className="text-zinc-400 hover:text-white transition-colors"
+            >
+              Chat Assistant
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>
